@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP GDPR\n"
 "POT-Creation-Date: 2018-06-01 09:19+0200\n"
-"PO-Revision-Date: 2018-06-01 09:19+0200\n"
+"PO-Revision-Date: 2018-06-18 10:31+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: it_IT\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: wp-gdpr-core.php\n"
@@ -26,10 +26,8 @@ msgid "GDPR - Request personal data"
 msgstr "GDPR -Richiedi dati personali"
 
 #: controller/controller-comments.php:96
-#, fuzzy
-#| msgid "View Comments"
 msgid "WordPress Comments"
-msgstr "Visualizza Commenti"
+msgstr "Commenti Wordpress"
 
 #: controller/controller-comments.php:157
 #: controller/controller-menu-page.php:330
@@ -87,7 +85,7 @@ msgstr "post ID"
 
 #: controller/controller-comments.php:426
 msgid "checkbox"
-msgstr ""
+msgstr "casella di controllo"
 
 #: controller/controller-comments.php:427
 #: controller/controller-comments.php:498
@@ -106,9 +104,8 @@ msgstr "nome autore"
 
 #: controller/controller-comments.php:430
 #: controller/controller-comments.php:501
-#, fuzzy
 msgid "comment content"
-msgstr "Contenuto del Commento"
+msgstr "contenuto del Commento"
 
 #: controller/controller-comments.php:488
 #, fuzzy
@@ -158,7 +155,7 @@ msgid ""
 msgstr ""
 "Acconsento al fatto che %s ritiri la mia email in modo che possa inviarmi le "
 "mie informazioni richieste\n"
-"            "
+"            ."
 
 #: controller/controller-menu-page.php:376
 #, fuzzy
@@ -171,7 +168,7 @@ msgstr ""
 
 #: controller/controller-menu-page.php:386
 msgid "Mailchimp API Key"
-msgstr ""
+msgstr "MailChimp API Key"
 
 #: controller/controller-menu-page.php:436
 #: controller/controller-menu-page.php:673
@@ -194,7 +191,7 @@ msgstr "lingua"
 
 #: controller/controller-menu-page.php:441
 msgid "resend email"
-msgstr "Rinvia l’e-mail"
+msgstr "rinvia l’e-mail"
 
 #: controller/controller-menu-page.php:498
 msgid "comments"
@@ -214,7 +211,7 @@ msgstr "woocommerce"
 
 #: controller/controller-menu-page.php:510
 msgid "flamingo"
-msgstr ""
+msgstr "fenicottero"
 
 #: controller/controller-menu-page.php:513
 msgid "mailchimp"
@@ -269,21 +266,16 @@ msgid "processed"
 msgstr "processati"
 
 #: controller/controller-menu-page.php:756
-#, fuzzy
-#| msgid "plugin name"
 msgid "Plugin name"
-msgstr "nome plugin"
+msgstr "Nome plugin"
 
 #: controller/controller-menu-page.php:757
-#, fuzzy
-#| msgid "status"
 msgid "Plugin status"
-msgstr "stato"
+msgstr "Stato plugin"
 
 #: controller/controller-menu-page.php:758
-#, fuzzy
 msgid "Personal data"
-msgstr "Elimina dati personali"
+msgstr "Dati personali"
 
 #: controller/controller-menu-page.php:759
 msgid "WP-GDPR add-on status"
@@ -346,14 +338,12 @@ msgid "submit"
 msgstr "invia"
 
 #: lib/gdpr-menu-backend.php:32
-#, fuzzy
-#| msgid "Request send"
 msgid "Requests"
-msgstr "Richiesta inviata"
+msgstr "Richieste"
 
 #: lib/gdpr-menu-backend.php:39 view/admin/menu/addon_page.php:10
 msgid "Add-ons"
-msgstr ""
+msgstr "Add-ons"
 
 #: lib/gdpr-menu-backend.php:44 view/admin/menu/settings-page.php:10
 msgid "Settings"
@@ -361,7 +351,7 @@ msgstr "Impostazioni"
 
 #: lib/gdpr-menu-backend.php:49
 msgid "Help Center"
-msgstr ""
+msgstr "Centro di supporto"
 
 #: view/admin/delete-comments-form.php:8
 #, fuzzy
@@ -385,8 +375,6 @@ msgid "from website users"
 msgstr ""
 
 #: view/admin/menu/dataregister.php:2
-#, fuzzy
-#| msgid "Data request"
 msgid "Dataregister"
 msgstr "Richiesta di dati"
 
@@ -404,7 +392,7 @@ msgstr "Aiuto"
 
 #: view/admin/menu/help_page.php:8
 msgid "Center"
-msgstr ""
+msgstr "Centro"
 
 #: view/admin/menu/plugin-page.php:8
 msgid "List of plugins that store data of users"
@@ -421,26 +409,21 @@ msgstr "WP GDPR"
 
 #: view/admin/menu/settings-page.php:41
 msgid "Miscellaneous:"
-msgstr ""
+msgstr "Varie:"
 
 #: view/admin/menu/settings-page.php:46
 msgid "Add-on Licensing:"
 msgstr ""
 
 #: view/admin/privacy-policy-form.php:11 view/admin/privacy-policy-form.php:42
-#, fuzzy
-#| msgid "Settings"
 msgid "Settings for"
-msgstr "Impostazioni"
+msgstr "Impostazioni per"
 
 #: view/admin/privacy-policy-form.php:11
-#, fuzzy
-#| msgid "comments"
 msgid "WordPress comments"
-msgstr "commenti"
+msgstr "Wordpress commenti"
 
 #: view/admin/privacy-policy-form.php:16
-#, fuzzy
 msgid "Privacy policy label"
 msgstr "Informativa Privacy"
 
@@ -449,7 +432,6 @@ msgid "Privacy policy text"
 msgstr "Testo Informativa Privacy"
 
 #: view/admin/privacy-policy-form.php:37
-#, fuzzy
 msgid "Privacy policy checkbox"
 msgstr "Informativa Privacy"
 
@@ -463,23 +445,19 @@ msgstr ""
 
 #: view/admin/small-form-delete-request.php:6
 msgid "Are you sure?"
-msgstr ""
+msgstr "Sei sicuro?"
 
 #: view/admin/small-form-delete-request.php:7
 msgid "This will send a delete request for your selected data"
 msgstr ""
 
 #: view/admin/small-form-delete-request.php:8
-#, fuzzy
-#| msgid "Send delete request"
 msgid "Yes, send delete request!"
-msgstr "Invia richiesta di cancellazione"
+msgstr "Invia richiesta di cancellazione!"
 
 #: view/admin/small-form-delete-request.php:9
-#, fuzzy
-#| msgid "Request send"
 msgid "Request sent !"
-msgstr "Richiesta inviata"
+msgstr "Richiesta inviata !"
 
 #: view/admin/small-form-delete-request.php:10
 #, fuzzy
@@ -523,10 +501,8 @@ msgid "Request to view your personal data"
 msgstr ""
 
 #: view/email/delete-confirmation-email-dpo.php:128
-#, fuzzy
-#| msgid "asked to delete his/her personal data."
 msgid "User asked to delete personal data at "
-msgstr "chiesto di cancellare i suoi dati personali."
+msgstr "chiesto di cancellare i suoi dati personali "
 
 #: view/email/delete-confirmation-email-dpo.php:129
 #: view/email/delete-confirmation-email.php:129
@@ -573,10 +549,8 @@ msgid "New request to view personal data"
 msgstr "GDPR -Richiedi dati personali"
 
 #: view/email/request-email-dpo.php:113
-#, fuzzy
-#| msgid "asked to delete his/her personal data."
 msgid "User asked to access personal data."
-msgstr "chiesto di cancellare i suoi dati personali."
+msgstr "Chiesto di cancellare i suoi dati personali."
 
 #: view/email/request-email-dpo.php:121
 #, fuzzy
@@ -593,7 +567,6 @@ msgstr ""
 "possibile visualizzare o eliminare i commenti creati sul sito Web:"
 
 #: view/email/request-email.php:121
-#, fuzzy
 msgid "Check your personal data"
 msgstr "I tuoi dati personali"
 
@@ -611,8 +584,7 @@ msgstr ""
 
 #: view/front/form.php:23
 msgid "Warning:"
-msgstr "Importante"
-""
+msgstr "Importante:"
 
 #: view/front/form.php:23
 msgid "This link will become deprecated after 48 hours."
@@ -620,15 +592,15 @@ msgstr "Questo link diventerà obsoleto dopo 48 ore."
 
 #: view/front/gdpr-template.php:17
 msgid "YOUR"
-msgstr ""
+msgstr "LL TUO"
 
 #: view/front/gdpr-template.php:17
 msgid "PRIVACY CENTER"
-msgstr ""
+msgstr "CENTRO PRIVACY"
 
 #: view/front/gdpr-template.php:22
 msgid "ALL PERSONAL DATA LINKED TO "
-msgstr ""
+msgstr "TUTTI I DATI PERSONALI LEGATI A "
 
 #: view/front/gdpr-template.php:26
 msgid "This is your personal data page. Only you are able to access this."
