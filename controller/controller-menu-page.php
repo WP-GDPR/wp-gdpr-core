@@ -512,6 +512,9 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 			case 5:
 				$data['r_type'] = __( 'mailchimp', 'wp_gdpr' );
 				break;
+			case 6:
+				$data['r_type'] = __( 'condolance manager', 'wp_gdpr' );
+				break;
 
 		}
 
