@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP GDPR\n"
-"POT-Creation-Date: 2018-06-04 09:21+0200\n"
+"POT-Creation-Date: 2018-06-20 11:00+0200\n"
 "PO-Revision-Date: 2018-02-07 13:14+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: wp-gdpr-core.php\n"
@@ -108,6 +108,18 @@ msgstr ""
 
 #: controller/controller-comments.php:569
 msgid "The site administrator received your request. Thank You."
+msgstr ""
+
+#: controller/controller-credentials-request.php:38
+msgid "Submit"
+msgstr ""
+
+#: controller/controller-credentials-request.php:39
+msgid "Warning:"
+msgstr ""
+
+#: controller/controller-credentials-request.php:40
+msgid "This link will become deprecated after 48 hours."
 msgstr ""
 
 #: controller/controller-menu-page.php:128
@@ -274,32 +286,69 @@ msgstr ""
 msgid "Settings saved"
 msgstr ""
 
+#: lib/gdpr-data-register-list-table.php:86
+msgid "No data found for given email address."
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:88
+msgid "No data found in data register."
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:113
+msgid "ID"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:114 lib/gdpr-form-builder.php:35
+#: view/front/form.php:9
+msgid "Email"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:115
+msgid "Message"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:116
+msgid "Reference ID"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:117
+msgid "Reference"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:118
+msgid "Submitted On"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:218
+msgid "Export found data to csv"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:305
+msgid "Select All"
+msgstr ""
+
 #: lib/gdpr-email.php:19
 msgid "We confirm your data deletion request"
 msgstr ""
 
-#: lib/gdpr-email.php:63
+#: lib/gdpr-email.php:68
 msgid "Confirmation data deletion"
 msgstr ""
 
-#: lib/gdpr-email.php:106
+#: lib/gdpr-email.php:116
 msgid "New delete request"
 msgstr ""
 
-#: lib/gdpr-email.php:153
+#: lib/gdpr-email.php:167
 msgid "Your data request"
 msgstr ""
 
-#: lib/gdpr-email.php:201
+#: lib/gdpr-email.php:220
 msgid "New data request"
 msgstr ""
 
 #: lib/gdpr-form-builder.php:33
 msgid "Request add-on for your plugin"
-msgstr ""
-
-#: lib/gdpr-form-builder.php:35 view/front/form.php:8
-msgid "Email"
 msgstr ""
 
 #: lib/gdpr-form-builder.php:38
@@ -321,19 +370,19 @@ msgstr ""
 msgid "submit"
 msgstr ""
 
-#: lib/gdpr-menu-backend.php:32
+#: lib/gdpr-menu-backend.php:31
 msgid "Requests"
 msgstr ""
 
-#: lib/gdpr-menu-backend.php:39 view/admin/menu/addon_page.php:10
+#: lib/gdpr-menu-backend.php:43 view/admin/menu/addon_page.php:10
 msgid "Add-ons"
 msgstr ""
 
-#: lib/gdpr-menu-backend.php:44 view/admin/menu/settings-page.php:10
+#: lib/gdpr-menu-backend.php:48 view/admin/menu/settings-page.php:10
 msgid "Settings"
 msgstr ""
 
-#: lib/gdpr-menu-backend.php:49
+#: lib/gdpr-menu-backend.php:53
 msgid "Help Center"
 msgstr ""
 
@@ -357,12 +406,20 @@ msgstr ""
 msgid "from website users"
 msgstr ""
 
-#: view/admin/menu/dataregister.php:2
+#: view/admin/menu/dataregister.php:7
 msgid "Dataregister"
 msgstr ""
 
-#: view/admin/menu/dataregister.php:2
+#: view/admin/menu/dataregister.php:7
 msgid "records of processing activities"
+msgstr ""
+
+#: view/admin/menu/dataregister.php:35
+msgid "Search data register by email address"
+msgstr ""
+
+#: view/admin/menu/dataregister.php:38
+msgid "Search in data register"
 msgstr ""
 
 #: view/admin/menu/delete-page.php:8
@@ -381,7 +438,11 @@ msgstr ""
 msgid "List of plugins that store data of users"
 msgstr ""
 
-#: view/admin/menu/settings-list.php:33
+#: view/admin/menu/settings-list.php:2
+msgid "Miscellaneous settings for your WP-GDPR configuration."
+msgstr ""
+
+#: view/admin/menu/settings-list.php:37
 msgid "Update settings"
 msgstr ""
 
@@ -539,22 +600,10 @@ msgstr ""
 msgid "Check your personal data"
 msgstr ""
 
-#: view/front/form.php:18
-msgid "Submit"
-msgstr ""
-
-#: view/front/form.php:21
+#: view/front/form.php:22
 msgid ""
 "Thank You! We will send you an email with a link to access your personal "
 "data."
-msgstr ""
-
-#: view/front/form.php:23
-msgid "Warning:"
-msgstr ""
-
-#: view/front/form.php:23
-msgid "This link will become deprecated after 48 hours."
 msgstr ""
 
 #: view/front/gdpr-template.php:17

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP GDPR\n"
-"POT-Creation-Date: 2018-06-01 16:35+0200\n"
-"PO-Revision-Date: 2018-06-03 12:33+0700\n"
+"POT-Creation-Date: 2018-06-20 11:01+0200\n"
+"PO-Revision-Date: 2018-06-20 11:02+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.0.8\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: wp-gdpr-core.php\n"
@@ -116,6 +116,18 @@ msgstr "Data ursprung: Kommentar i WordPress"
 #: controller/controller-comments.php:569
 msgid "The site administrator received your request. Thank You."
 msgstr "Hemsidans administratör har fått din begäran. Tack."
+
+#: controller/controller-credentials-request.php:38
+msgid "Submit"
+msgstr "Skicka"
+
+#: controller/controller-credentials-request.php:39
+msgid "Warning:"
+msgstr "Varning:"
+
+#: controller/controller-credentials-request.php:40
+msgid "This link will become deprecated after 48 hours."
+msgstr "Denna länken blir ogiltig efter 48 timmar."
 
 #: controller/controller-menu-page.php:128
 msgid "Comments deleted"
@@ -285,33 +297,76 @@ msgstr "WD-GDPR tillägg status"
 msgid "Settings saved"
 msgstr "Inställningar sparade"
 
+#: lib/gdpr-data-register-list-table.php:86
+#, fuzzy
+#| msgid "Set your DPO e-mail address"
+msgid "No data found for given email address."
+msgstr "Ange din DPO’s epostadress"
+
+#: lib/gdpr-data-register-list-table.php:88
+msgid "No data found in data register."
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:113
+msgid "ID"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:114 lib/gdpr-form-builder.php:35
+#: view/front/form.php:9
+msgid "Email"
+msgstr "Epost"
+
+#: lib/gdpr-data-register-list-table.php:115
+msgid "Message"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:116
+msgid "Reference ID"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:117
+msgid "Reference"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:118
+#, fuzzy
+#| msgid "Submit"
+msgid "Submitted On"
+msgstr "Skicka"
+
+#: lib/gdpr-data-register-list-table.php:218
+msgid "Export found data to csv"
+msgstr ""
+
+#: lib/gdpr-data-register-list-table.php:305
+#, fuzzy
+#| msgid "select"
+msgid "Select All"
+msgstr "välj"
+
 #: lib/gdpr-email.php:19
 msgid "We confirm your data deletion request"
 msgstr "Vi bekräftar din begäran om borttagning"
 
-#: lib/gdpr-email.php:63
+#: lib/gdpr-email.php:68
 msgid "Confirmation data deletion"
 msgstr "Bekräftelse om data borttagning"
 
-#: lib/gdpr-email.php:106
+#: lib/gdpr-email.php:116
 msgid "New delete request"
 msgstr "Ny begäran om bortagning"
 
-#: lib/gdpr-email.php:153
+#: lib/gdpr-email.php:167
 msgid "Your data request"
 msgstr "Din data begärd"
 
-#: lib/gdpr-email.php:201
+#: lib/gdpr-email.php:220
 msgid "New data request"
 msgstr "Ny begäran om visning"
 
 #: lib/gdpr-form-builder.php:33
 msgid "Request add-on for your plugin"
 msgstr "Begär add-on för ditt tillägg"
-
-#: lib/gdpr-form-builder.php:35 view/front/form.php:8
-msgid "Email"
-msgstr "Epost"
 
 #: lib/gdpr-form-builder.php:38
 #, php-format
@@ -334,19 +389,19 @@ msgstr "Jag accepterar att WP-GDPR får tillgång till min epost."
 msgid "submit"
 msgstr "skicka"
 
-#: lib/gdpr-menu-backend.php:32
+#: lib/gdpr-menu-backend.php:31
 msgid "Requests"
 msgstr "Begäran"
 
-#: lib/gdpr-menu-backend.php:39 view/admin/menu/addon_page.php:10
+#: lib/gdpr-menu-backend.php:43 view/admin/menu/addon_page.php:10
 msgid "Add-ons"
 msgstr "Tillägg"
 
-#: lib/gdpr-menu-backend.php:44 view/admin/menu/settings-page.php:10
+#: lib/gdpr-menu-backend.php:48 view/admin/menu/settings-page.php:10
 msgid "Settings"
 msgstr "Inställningar"
 
-#: lib/gdpr-menu-backend.php:49
+#: lib/gdpr-menu-backend.php:53
 msgid "Help Center"
 msgstr "Hjälpcenter"
 
@@ -370,13 +425,25 @@ msgstr "Lista på dataförfrågningar"
 msgid "from website users"
 msgstr "från webbplatsens användare"
 
-#: view/admin/menu/dataregister.php:2
+#: view/admin/menu/dataregister.php:7
 msgid "Dataregister"
 msgstr "Data register"
 
-#: view/admin/menu/dataregister.php:2
+#: view/admin/menu/dataregister.php:7
 msgid "records of processing activities"
 msgstr "register över bearbetningsaktiviteter"
+
+#: view/admin/menu/dataregister.php:35
+#, fuzzy
+#| msgid "Set your DPO e-mail address"
+msgid "Search data register by email address"
+msgstr "Ange din DPO’s epostadress"
+
+#: view/admin/menu/dataregister.php:38
+#, fuzzy
+#| msgid "Dataregister"
+msgid "Search in data register"
+msgstr "Data register"
 
 #: view/admin/menu/delete-page.php:8
 msgid "List of delete requests"
@@ -394,7 +461,11 @@ msgstr "Center"
 msgid "List of plugins that store data of users"
 msgstr "Lista på tillägg som lagrar användardata"
 
-#: view/admin/menu/settings-list.php:33
+#: view/admin/menu/settings-list.php:2
+msgid "Miscellaneous settings for your WP-GDPR configuration."
+msgstr ""
+
+#: view/admin/menu/settings-list.php:37
 msgid "Update settings"
 msgstr "Uppdatera Inställningar"
 
@@ -452,8 +523,8 @@ msgid "Yes, send delete request!"
 msgstr "Ja, skicka raderingsförfrågan!"
 
 #: view/admin/small-form-delete-request.php:9
-msgid "Request sent !"
-msgstr "Begäran skickad !"
+msgid "Request sent!"
+msgstr "Begäran skickad!"
 
 #: view/admin/small-form-delete-request.php:10
 msgid "Your delete request has been sent"
@@ -554,25 +625,13 @@ msgstr ""
 msgid "Check your personal data"
 msgstr "Visa dina personliga data"
 
-#: view/front/form.php:18
-msgid "Submit"
-msgstr "Skicka"
-
-#: view/front/form.php:21
+#: view/front/form.php:22
 msgid ""
 "Thank You! We will send you an email with a link to access your personal "
 "data."
 msgstr ""
 "Tack. Vi epostar en länk via email där du får tillgång till din personliga "
 "data."
-
-#: view/front/form.php:23
-msgid "Warning:"
-msgstr "Varning:"
-
-#: view/front/form.php:23
-msgid "This link will become deprecated after 48 hours."
-msgstr "Denna länken blir ogiltig efter 48 timmar."
 
 #: view/front/gdpr-template.php:17
 msgid "YOUR"
