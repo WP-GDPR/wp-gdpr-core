@@ -2,6 +2,7 @@
 
 namespace wp_gdpr\controller;
 
+use wp_gdpr\config\custom\Text_Config;
 use wp_gdpr\lib\Gdpr_Customtables;
 use wp_gdpr\lib\Gdpr_Container;
 use wp_gdpr\lib\Gdpr_Email;
@@ -93,7 +94,7 @@ class Controller_Comments extends Gdpr_Log_Interface {
         <li class="nav-item">
         <a href="<?php echo '#' . $this->navigation_id; ?>" data-toggle="tab" aria-expanded="true"
            class="nav-link <?php echo $active; ?>">
-			<?php _e( 'WordPress Comments', 'wp_gdpr' ); ?><span
+			<?php Text_Config::filter_wp_comments(); ?><span
                     class="badge badge-pill badge-primary m-l-10"><?php //placeholder?></span>
         </a>
         </li><?php
@@ -485,7 +486,7 @@ class Controller_Comments extends Gdpr_Log_Interface {
             <div class="row">
                 <div class="col-12">
                     <div class="card-box table-responsive" style="border:0;">
-                    <h5><?php _e('Data origin : WordPress Comments', 'wp_gdpr' ); ?></h5>
+                    <h5><?php _e('Data origin : ', 'wp_gdpr' ); Text_Config::filter_wp_comments() ?></h5>
                     <?php
 						$comments = $this->get_all_comments_by_author( $this->email_request );
 						$comments = $this->map_comments( $comments );

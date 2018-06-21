@@ -35,9 +35,17 @@ class Controller_Credentials_Request {
         // get language
         $pieces = new Gdpr_Language();
         $pieces = $pieces->get_language();
+
+        // Request page filters
         $submit_custom_text = apply_filters( 'wp-gdpr-submit-text', __("Submit", 'wp_gdpr') );
         $warning_custom_text = apply_filters( 'wp-gdpr-warning-text', __("Warning:", 'wp_gdpr') );
         $link_custom_text = apply_filters( 'wp-gdpr-link-text', __("This link will become deprecated after 48 hours.", 'wp_gdpr') );
+//
+//		//Privacy Cneter page filters
+//        $wp_comments = apply_filters('wp_gdpr_wp_comments', __('WordPress Comments', 'wp_gdpr' ) );
+//        $wp_condolance_manager = apply_filters('wp_gdpr_wp_condolance_manager', __('Condolence manager', 'wp_gdpr' ) );
+
+
 
 		ob_start();
 		include_once GDPR_DIR . 'view/front/form.php';

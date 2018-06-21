@@ -67,16 +67,30 @@ Here are the filters for the email that is send to the requester and the dpo for
 
 We have added 3 filters to change the text on the request page.
 
+0. 'Original text' => 'filter_name'
 1. 'Submit' => 'wp-gdpr-submit-text'
 2. 'Warning' => 'wp-gdpr-warning-text'
 3. 'This link will become deprecated after 48 hours.' => 'wp-gdpr-link-text'
+
+= Privacy Center page filters =
+
+We have added filters to change the text on the navigation of the privacy center page.
+
+0. 'Original text' => 'filter_name'
+1. 'Wordpress Comments' => 'wp_gdpr_wp_comments'
+2. 'Condolence Manager' => 'wp_gdpr_wp_condolance_manager'
+3. 'Contact Form DB7' => 'wp_gdpr_wp_cfdb7'
+4. 'Flamingo' => 'wp_gdpr_wp_flamingo'
+5. 'Mailchimp' => 'wp_gdpr_wp_mailchimp'
+6. 'Gravity Forms' => 'wp_gdpr_wp_grafity_form'
+7. 'WooCommerce' => 'wp_gdpr_wp_woocommerce'
+
 
 == Installation ==
 1. Upload the plugin files to the /wp-content/plugins, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the ‘Plugins’ screen in WordPress
 3. ‘WP GDPR’ will be created to view the requests in the backend
 4. The page 'GDPR – Request personal data' will be created. This page displays the form where visitors can submit their request.
-
 
 == Screenshots ==
 1. WP-GDPR Requests - Overview of all requests from users regarding their personal data
