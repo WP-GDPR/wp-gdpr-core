@@ -104,6 +104,9 @@ We have added filters to change the text on the navigation of the privacy center
 == Frequently Asked Questions ==
 
 == Changelog ==
+Version 2.0.4 (2018-06- )
+    -added 7 filters for the privacy center page.
+
 Version 2.0.3 (2018-06-12)
     - Fix German translation issue
     - Css conflixt fix
