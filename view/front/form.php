@@ -5,11 +5,11 @@
 
 ?>
 <?php if ( 'GET' == $_SERVER['REQUEST_METHOD'] && ! isset( $_REQUEST['thank_you'] ) ) : ?>
-    <form action="" method="post">
+    <form method="post">
 		<?php _e( 'Email', 'wp_gdpr' ); ?>:<br>
-        <input type="email" name="email" value="" required>
+        <input type="email" name="email" required>
         <br><br>
-        <input type="checkbox" name="checkbox_gdpr" required>
+        <input type="checkbox" name="checkbox_gdpr" id="checkbox_gdpr" required>
         <label for="checkbox_gdpr">
 			<?php echo wp_unslash( $privacy_policy_strings[3] ); ?>
         </label>

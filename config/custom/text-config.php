@@ -4,7 +4,7 @@ namespace wp_gdpr\config\custom;
 
 class Text_Config {
 
-//Privacy Cneter page filters
+//Privacy Center page filters
 	public static function filter_wp_comments() {
 		echo apply_filters( 'wp_gdpr_wp_comments', __( 'WordPress Comments', 'wp_gdpr' ) );
 	}
