@@ -22,6 +22,9 @@ class Gdpr_Autoloader {
 	 * @param $class    string  Full name of a class: namespaces\classname
 	 */
 	public function autoloader_callback( $class ) {
+		/**
+		 *  WP-GDPR-Core
+		 */
 		if ( strpos( $class, self::NAMESPACE_NAME ) === 0 ) {
 			$path = substr( $class, strlen( self::NAMESPACE_NAME ) );
 			$path = strtolower( $path );
@@ -38,10 +41,15 @@ class Gdpr_Autoloader {
 			//TODO update this functions in all addons and solve this code here as examlpe on line 59
 		} elseif ( strpos( $class, self::GF_NAMESPACE_NAME ) === 0 ) {
 			$path = substr( $class, strlen( self::GF_NAMESPACE_NAME ) );
+			var_dump($path);
 			$path = strtolower( $path );
+			var_dump($path);
 			$path = str_replace( '_', '-', $path );
+			var_dump($path);
 			$path = str_replace( '\\', DIRECTORY_SEPARATOR, $path ) . '.php';
+			var_dump($path);
 			$path = GDPR_GF_DIR . DIRECTORY_SEPARATOR . $path;
+			var_dump($path); die;
 
 			if ( file_exists( $path ) ) {
 				include $path;
@@ -64,6 +72,8 @@ class Gdpr_Autoloader {
 				include $path;
 			}
 		}
+
+		//TODO foreach add-on
 	}
 }
 

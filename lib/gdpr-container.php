@@ -23,7 +23,10 @@ class Gdpr_Container {
 		 * //TODO do not register objects in array
 		 * //TODO register only the interface and name of class
 		 */
+
+
 		try {
+
 			if ( defined( 'GDPR_TESTING' )  && true === GDPR_TESTING ) {
 				return self::get_mock( $class_name, $arguments );
 			} else {
