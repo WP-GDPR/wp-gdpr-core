@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# Version 2.0.4 
+* Added 7 filters for the privacy center page
+* Translation fix for emails
+* Italian translation added some new strings
+* Html5 
+
 # Version 2.0.3
 * Fix German translation issue
 * Css conflict fix

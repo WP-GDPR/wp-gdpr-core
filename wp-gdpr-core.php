@@ -25,7 +25,7 @@ namespace wp_gdpr;
 define( 'GDPR_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GDPR_URL', plugin_dir_url( __FILE__ ) );
 define( 'GDPR_BASE_NAME', dirname( plugin_basename( __FILE__ ) ) );
-define( 'GDPR_VERSION', '2.0.3' );
+define( 'GDPR_VERSION', '2.0.4' );
 
 
 
