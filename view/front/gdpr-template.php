@@ -6,7 +6,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 
+/**
+ * Translation strings for Privacy center page.
+ * From php to javascript.
+ */
+$search_text= __('Search:', 'wp_gdpr');
+$showing_text= __('Showing _START_ to _END_ of _TOTAL_ entries', 'wp_gdpr');
+$previous_text= __('Previous', 'wp_gdpr');
+$next_text= __('Next', 'wp_gdpr');
+$copy_text= __('copy', 'wp_gdpr');
+$print_text= __('print', 'wp_gdpr');
 ?>
+
+<script type="text/javascript">
+    var search_text=<?php echo json_encode($search_text); ?>;
+    var showing_text=<?php echo json_encode($showing_text); ?>;
+    var previous_text=<?php echo json_encode($previous_text); ?>;
+    var next_text=<?php echo json_encode($next_text); ?>;
+    var copy_text=<?php echo json_encode($copy_text); ?>;
+    var print_text=<?php echo json_encode($print_text); ?>;
+</script>
+
+
 <?php use wp_gdpr\lib\Gdpr_Options_Helper; ?>
 <div class="wrapper" id="wp-gdpr">
     <div class="container-fluid">
