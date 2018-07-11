@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP GDPR\n"
-"POT-Creation-Date: 2018-07-09 15:33+0200\n"
-"PO-Revision-Date: 2018-07-09 15:34+0200\n"
+"POT-Creation-Date: 2018-07-11 09:30+0200\n"
+"PO-Revision-Date: 2018-07-11 09:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -27,35 +27,27 @@ msgstr "WordPress Kommentarer"
 
 #: config/custom/text-config.php:13
 msgid "Condolence Manager"
-msgstr ""
+msgstr "Condolence Manager"
 
 #: config/custom/text-config.php:17
 msgid "Contact Form DB7"
-msgstr ""
+msgstr "Contact Form DB7"
 
 #: config/custom/text-config.php:21
-#, fuzzy
-#| msgid "flamingo"
 msgid "Flamingo"
-msgstr "flamingo"
+msgstr "Flamingo"
 
 #: config/custom/text-config.php:25
-#, fuzzy
-#| msgid "mailchimp"
 msgid "Mailchimp"
-msgstr "mailchimp"
+msgstr "Mailchimp"
 
 #: config/custom/text-config.php:29
-#, fuzzy
-#| msgid "gravity form entries"
 msgid "Gravity Forms"
-msgstr "gravity form poster"
+msgstr "Gravity Forms"
 
 #: config/custom/text-config.php:33
-#, fuzzy
-#| msgid "woocommerce"
 msgid "WooCommerce"
-msgstr "woocommerce"
+msgstr "Woocommerce"
 
 #: config/startup-config.php:74
 msgid "GDPR - Request personal data"
@@ -334,10 +326,8 @@ msgid "Settings saved"
 msgstr "Inställningar sparade"
 
 #: lib/gdpr-data-register-list-table.php:86
-#, fuzzy
-#| msgid "Set your DPO e-mail address"
 msgid "No data found for given email address."
-msgstr "Ange din DPO’s epostadress"
+msgstr "Ange din DPO’s epostadress."
 
 #: lib/gdpr-data-register-list-table.php:88
 msgid "No data found in data register."
@@ -365,20 +355,16 @@ msgid "Reference"
 msgstr ""
 
 #: lib/gdpr-data-register-list-table.php:118
-#, fuzzy
-#| msgid "Submit"
 msgid "Submitted On"
-msgstr "Skicka"
+msgstr "Inlämnad på"
 
 #: lib/gdpr-data-register-list-table.php:218
 msgid "Export found data to csv"
 msgstr ""
 
 #: lib/gdpr-data-register-list-table.php:305
-#, fuzzy
-#| msgid "select"
 msgid "Select All"
-msgstr "välj"
+msgstr "Välj alla"
 
 #: lib/gdpr-email.php:19
 msgid "We confirm your data deletion request"
@@ -470,16 +456,12 @@ msgid "records of processing activities"
 msgstr "register över bearbetningsaktiviteter"
 
 #: view/admin/menu/dataregister.php:35
-#, fuzzy
-#| msgid "Set your DPO e-mail address"
 msgid "Search data register by email address"
-msgstr "Ange din DPO’s epostadress"
+msgstr "Sök dataregister via e-postadress"
 
 #: view/admin/menu/dataregister.php:38
-#, fuzzy
-#| msgid "Dataregister"
 msgid "Search in data register"
-msgstr "Data register"
+msgstr "Sök i dataregistret"
 
 #: view/admin/menu/delete-page.php:8
 msgid "List of delete requests"
@@ -671,27 +653,27 @@ msgstr ""
 
 #: view/front/gdpr-template.php:13
 msgid "Search:"
-msgstr ""
+msgstr "Sök:"
 
 #: view/front/gdpr-template.php:14
 msgid "Showing _START_ to _END_ of _TOTAL_ entries"
-msgstr ""
+msgstr "Visar _START_ till _END_ av _TOTAL_ poster"
 
 #: view/front/gdpr-template.php:15
 msgid "Previous"
-msgstr ""
+msgstr "Tidigare"
 
 #: view/front/gdpr-template.php:16
 msgid "Next"
-msgstr ""
+msgstr "Nästa"
 
 #: view/front/gdpr-template.php:17
 msgid "copy"
-msgstr ""
+msgstr "kopiera"
 
 #: view/front/gdpr-template.php:18
 msgid "print"
-msgstr ""
+msgstr "skriva ut"
 
 #: view/front/gdpr-template.php:38
 msgid "YOUR"
