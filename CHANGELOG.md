@@ -1,4 +1,7 @@
 # CHANGELOG
+# Version 2.0.5
+* Added new translations on the privacy center page
+* Update translations BE, IT, SE
 
 # Version 2.0.4 
 * Added 7 filters for the privacy center page
