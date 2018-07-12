@@ -23,6 +23,10 @@
     color: #fff;
     background-color:#2c4257;
 }
+.comment-form-gdpr, input[type="checkbox"]{
+    display: inline !important;
+    width: auto !important;
+}
 
 /* TODO this css file will be added on a lot of pages so selectors should very direct */
 input[name="checkbox_gdpr"]{
