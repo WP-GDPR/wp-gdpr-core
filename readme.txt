@@ -104,6 +104,10 @@ We have added filters to change the text on the navigation of the privacy center
 == Frequently Asked Questions ==
 
 == Changelog ==
+Version 2.0.6 (2018-07-12)
+    - Css fix for privacy center sorting arrows
+    - Update SE translation
+    
 Version 2.0.5 (2018-07-11)
     - Added new translations on the privacy center page
     - Update translations BE, IT, SE

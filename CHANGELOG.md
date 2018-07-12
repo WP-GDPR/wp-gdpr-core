@@ -1,4 +1,8 @@
 # CHANGELOG
+# Version 2.0.6
+* Css fix for privacy center sorting arrows
+* Update SE translation
+
 # Version 2.0.5
 * Added new translations on the privacy center page
 * Update translations BE, IT, SE
