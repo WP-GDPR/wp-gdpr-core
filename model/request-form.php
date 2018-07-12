@@ -62,7 +62,7 @@ class Request_Form extends Form_Validation_Model {
 	 */
 	public function set_mail_from_name( $original_email_from ) {
 		if( isset( $_POST['mail_action'] ) && $_POST['mail_action'] == 'gdpr' ) {
-			$original_email_from = get_bloginfo( 'name', true );
+			$original_email_from = get_bloginfo( 'name' );
 		}
 
 		return $original_email_from;

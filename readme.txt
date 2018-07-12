@@ -3,7 +3,7 @@ Contributors: Mieke Nijs, Sebastian Kurzynowski, AppSaloon
 Tags: Personal data, GDPR, compliance, regulations, protection, data protection, consent, European, regulation, privacy, RGPD, AVG, EU, Woocommerce, wc, Contact Form 7, cf7, cfdb7, gravity forms, gf, flamingo
 Requires at least: 4.6.10
 Tested up to: 4.9.7
-Stable tag: 2.0.5
+Stable tag: 2.0.6
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -107,6 +107,7 @@ We have added filters to change the text on the navigation of the privacy center
 Version 2.0.6 (2018-07-12)
     - Css fix for privacy center sorting arrows
     - Update SE translation
+    - Fix for html entities in email
     
 Version 2.0.5 (2018-07-11)
     - Added new translations on the privacy center page

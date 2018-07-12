@@ -2,6 +2,7 @@
 # Version 2.0.6
 * Css fix for privacy center sorting arrows
 * Update SE translation
+* Fix for html entities in email
 
 # Version 2.0.5
 * Added new translations on the privacy center page

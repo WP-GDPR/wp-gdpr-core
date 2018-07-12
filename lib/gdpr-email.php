@@ -112,7 +112,7 @@ class Gdpr_Email {
 	 * @since 1.6.0
 	 */
 	public static function send_new_delete_request_email_to_admin( $requested_email ) {
-		$site_name = get_bloginfo( 'name', true );
+		$site_name = get_bloginfo( 'name' );
 		$subject   = '[' . $site_name . '] ' . __( 'New delete request', 'wp_gdpr' );
 		$to        = Gdpr_Options_Helper::get_dpo_email();
 		$content   = static::get_admin_new_delete_request_content( $requested_email );
@@ -163,7 +163,7 @@ class Gdpr_Email {
 	 */
 	public static function send_request_email_to_requester( $single_address, $time_of_insertion, $language ) {
 		$to        = $single_address;
-		$site_name = get_bloginfo( 'name', true );
+		$site_name = get_bloginfo( 'name' );
 		$subject   = '[' . $site_name . '] ' . __( 'Your data request', 'wp_gdpr' );
 		$content   = static::get_request_email_content( $single_address, $time_of_insertion, $language );
 		$headers   = array( 'Content-Type: text/html; charset=UTF-8' );
@@ -216,7 +216,7 @@ class Gdpr_Email {
 	 */
 	public static function send_request_email_to_dpo( $single_address, $time_of_insertion, $language ) {
 		$to        = $single_address;
-		$site_name = get_bloginfo( 'name', true );
+		$site_name = get_bloginfo( 'name' );
 		$subject   = '[' . $site_name . '] ' . __( 'New data request', 'wp_gdpr' );
 		$content   = static::get_request_email_dpo_content( $single_address, $time_of_insertion, $language );
 		$headers   = array( 'Content-Type: text/html; charset=UTF-8' );
