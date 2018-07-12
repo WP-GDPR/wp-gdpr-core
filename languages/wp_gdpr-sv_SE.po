@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP GDPR\n"
 "POT-Creation-Date: 2018-07-11 09:30+0200\n"
-"PO-Revision-Date: 2018-07-11 09:37+0200\n"
+"PO-Revision-Date: 2018-07-11 16:24+0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: config/custom/text-config.php:9
 msgid "WordPress Comments"
-msgstr "WordPress Kommentarer"
+msgstr "WordPress kommentarer"
 
 #: config/custom/text-config.php:13
 msgid "Condolence Manager"
@@ -60,12 +60,9 @@ msgid ""
 "the comments placed on the website. For more info check our privacy policy "
 "where you'll get more info on where, how and why we store your data."
 msgstr ""
-"Vi respekterar din personliga integritet men för att kunna lägga in "
-"kommentarer behöver vi ditt godkännande att lagra dina uppgifter. Genom att "
-"kryssa i rutan och kommentera produkterna accepterar du lagring och "
-"hantering av dina uppgifter på denna webbplats. Du kan när som helst begära "
-"att din personliga data raderas. Vänligen läs mer i vår integritetspolicy "
-"längst ner på vår sida."
+"Formuläret samlar ditt namn, email och innehåll så vi kan följa "
+"kommentarerna på vår webbplats. För mer information se vår integritetspolicy "
+"där du får veta var, hur och varför vi lagrar din information."
 
 #: controller/controller-comments.php:245
 #: controller/controller-comments.php:250
@@ -135,7 +132,7 @@ msgstr "kommentar innehåll"
 
 #: controller/controller-comments.php:489
 msgid "Data origin : "
-msgstr "Data ursprung: "
+msgstr "Data ursprung : "
 
 #: controller/controller-comments.php:570
 msgid "The site administrator received your request. Thank You."
@@ -255,7 +252,7 @@ msgstr "mailchimp"
 
 #: controller/controller-menu-page.php:516
 msgid "condolance manager"
-msgstr ""
+msgstr "condolance manager"
 
 #: controller/controller-menu-page.php:556
 msgid "waiting for email"
@@ -327,15 +324,15 @@ msgstr "Inställningar sparade"
 
 #: lib/gdpr-data-register-list-table.php:86
 msgid "No data found for given email address."
-msgstr "Ange din DPO’s epostadress."
+msgstr "Ingen data fanns för denna epostadress."
 
 #: lib/gdpr-data-register-list-table.php:88
 msgid "No data found in data register."
-msgstr ""
+msgstr "Ingen data i våra register."
 
 #: lib/gdpr-data-register-list-table.php:113
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #: lib/gdpr-data-register-list-table.php:114 lib/gdpr-form-builder.php:35
 #: view/front/form.php:9
@@ -344,15 +341,15 @@ msgstr "Epost"
 
 #: lib/gdpr-data-register-list-table.php:115
 msgid "Message"
-msgstr ""
+msgstr "Meddelande"
 
 #: lib/gdpr-data-register-list-table.php:116
 msgid "Reference ID"
-msgstr ""
+msgstr "Referens ID"
 
 #: lib/gdpr-data-register-list-table.php:117
 msgid "Reference"
-msgstr ""
+msgstr "Referens"
 
 #: lib/gdpr-data-register-list-table.php:118
 msgid "Submitted On"
@@ -360,7 +357,7 @@ msgstr "Inlämnad på"
 
 #: lib/gdpr-data-register-list-table.php:218
 msgid "Export found data to csv"
-msgstr ""
+msgstr "Exportera data till CSV"
 
 #: lib/gdpr-data-register-list-table.php:305
 msgid "Select All"
@@ -397,7 +394,7 @@ msgid ""
 "request. Check out our %s for more information."
 msgstr ""
 "Detta formulär registrerar din epost så att vi kan uppdatera dig om din "
-"begäran. Se våra%s för mera information."
+"begäran. Se våra %s för mer information."
 
 #: lib/gdpr-form-builder.php:39
 msgid "privacy policy"
@@ -481,7 +478,7 @@ msgstr "Lista på tillägg som lagrar användardata"
 
 #: view/admin/menu/settings-list.php:2
 msgid "Miscellaneous settings for your WP-GDPR configuration."
-msgstr ""
+msgstr "Olika inställningar för att konfigurera WP-GDPR."
 
 #: view/admin/menu/settings-list.php:37
 msgid "Update settings"
@@ -647,9 +644,7 @@ msgstr "Visa dina personliga data"
 msgid ""
 "Thank You! We will send you an email with a link to access your personal "
 "data."
-msgstr ""
-"Tack. Vi epostar en länk via email där du får tillgång till din personliga "
-"data."
+msgstr "Tack. Vi epostar en länk där du får tillgång till din personliga data."
 
 #: view/front/gdpr-template.php:13
 msgid "Search:"
@@ -673,7 +668,7 @@ msgstr "kopiera"
 
 #: view/front/gdpr-template.php:18
 msgid "print"
-msgstr "skriva ut"
+msgstr "skriv ut"
 
 #: view/front/gdpr-template.php:38
 msgid "YOUR"
