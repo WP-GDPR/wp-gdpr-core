@@ -142,7 +142,8 @@ class Controller_Comments extends Gdpr_Log_Interface {
 		if ( ! empty( $privacy_policy_array[1] ) ) {
 			$privacy_policy_string .= '<div class="js-gdpr-warning"></div><span class="required">*</span> <label for="gdpr">' . wp_unslash( $privacy_policy_array[1] ) . '</label>';
 		}
-		$privacy_policy_string .= '<p class="comment-form-gdpr"><input  required="required" id="gdpr" name="gdpr" type="checkbox"  />';
+		$privacy_policy_string .= '<p class="comment-form-gdpr"><input  required="required" id="gdpr" name="gdpr" type="checkbox"  style="display:inline;
+		width:auto;" />';
 		if ( ! empty( $privacy_policy_array[2] ) ) {
 			$privacy_policy_string .= wp_unslash( $privacy_policy_array[2] );
 		}
