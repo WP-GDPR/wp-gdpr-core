@@ -64,5 +64,8 @@
 #wpgdpr .table td, #wp-gdpr .table td{
     padding-left: 30px;
 }
+#wp-gdpr .tab-content {
+    display: block;
+}
 
 
