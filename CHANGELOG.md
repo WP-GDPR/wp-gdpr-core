@@ -1,4 +1,8 @@
 # CHANGELOG
+
+#Version 2.0.8
+* Add condolance manager in plugins.json
+
 #Version 2.0.7
 * Css fix for tab-content
 

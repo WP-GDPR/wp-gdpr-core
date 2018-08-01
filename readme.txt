@@ -1,9 +1,9 @@
 === WP GDPR ===
-Contributors: Mieke Nijs,Sebastian Kurzynowski,AppSaloon,Kim Vanrijckel,kevinume,aytac
+Contributors: mieke01,sebakurzyn,vanrijckel,kevinume,aytac
 Tags: Personal data, GDPR, compliance, regulations, protection, data protection, consent, European, regulation, privacy, RGPD, AVG, EU, Woocommerce, wc, Contact Form 7, cf7, cfdb7, gravity forms, gf, flamingo
 Requires at least: 4.6.10
-Tested up to: 4.9.7
-Stable tag: 2.0.7
+Tested up to: 4.9.8
+Stable tag: 2.0.8
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -104,6 +104,9 @@ We have added filters to change the text on the navigation of the privacy center
 == Frequently Asked Questions ==
 
 == Changelog ==
+
+Version 2.0.8 (2018-08-01)
+    - Add condolance manager in plugins.json
 
 Version 2.0.7 (2018-07-19)
     - Css fix for tab-content
