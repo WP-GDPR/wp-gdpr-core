@@ -1,4 +1,7 @@
 # CHANGELOG
+#Version 2.0.7
+* Css fix for tab-content
+
 # Version 2.0.6
 * Css fix for privacy center sorting arrows
 * Update SE translation
