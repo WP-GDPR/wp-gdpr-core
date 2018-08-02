@@ -73,7 +73,7 @@
     "plugin_wp_gdpr": "wp-gdpr-cdm-addon/wp-gdpr-cdm-addon.php",
     "plugin_tutorial_link": "https://wp-gdpr.eu/portfolio/",
     "plugin_tutorial_img": "https://wp-gdpr.eu/wp-content/uploads/2018/04/cf7-1.png",
-    "plugin_tutorial_intro": "Make your Condolance Manager GDPR ready.",
+    "plugin_tutorial_intro": "Make your <a href='https://condolencemanager.com/' target='_blank'>Condolance Manager</a> GDPR ready.",
     "plugin_icon": "assets/images/cdm.png"
   }
 }
