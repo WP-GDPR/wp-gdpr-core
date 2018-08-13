@@ -1,5 +1,5 @@
 === WP GDPR ===
-Contributors: mieke01,sebakurzyn,vanrijckel,kevinume,aytac,koenhuybrechts
+Contributors: mieke01,sebakurzyn,vanrijckel,kevinume,aytac,koenhuybrechts,markcreeten
 Tags: Personal data, GDPR, compliance, regulations, protection, data protection, consent, European, regulation, privacy, RGPD, AVG, EU, Woocommerce, wc, Contact Form 7, cf7, cfdb7, gravity forms, gf, flamingo
 Requires at least: 4.6.10
 Tested up to: 4.9.8
