@@ -72,7 +72,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 					'jquery-ui-core'
 				), null, false );
 				if ( $hook == 'wp-gdpr_page_help' ) {
-					wp_enqueue_script( 'carousel_gdpr', GDPR_URL . 'assets/js/slick.min.js', array( 'jquery' ), null, true );
+					wp_enqueue_script( 'carousel_gdpr', GDPR_URL . 'assets/js/slick.min.js', array( 'jquery' ), null,
+						true );
 					$this->log->info( 'Admin slick.min.js loaded for help page' );
 					break;
 				}
@@ -92,7 +93,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 			update_option( self::PRIVACY_POLICY_LABEL . $lang, $_REQUEST['gdpr_priv_pov_label'] );
 			update_option( self::PRIVACY_POLICY_TEXT . $lang, $_REQUEST['gdpr_priv_pov_text'] );
 			update_option( self::PRIVACY_POLICY_CHECKBOX . $lang, $_REQUEST['gdpr_priv_pov_checkbox'] );
-			update_option( self::PRIVACY_POLICY_TEXT_DATA_REQUEST . $lang, $_REQUEST['gdpr_priv_pov_text_data_request'] );
+			update_option( self::PRIVACY_POLICY_TEXT_DATA_REQUEST . $lang,
+				$_REQUEST['gdpr_priv_pov_text_data_request'] );
 
 			do_action( 'gdpr_save_custom_privacy_policy', $lang );
 		}
@@ -128,8 +130,10 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 						$message        = __( 'Comments deleted', 'wp_gdpr' );
 					} else {
 						$type_number    = $data_to_process['r_type'];
-						$processed_data = apply_filters( 'gdpr_map_data_for_email_' . $type_number, $unserialized_data, $data_to_process );
-						$message        = apply_filters( 'gdpr_get_del_message_' . $type_number, $unserialized_data, $data_to_process );
+						$processed_data = apply_filters( 'gdpr_map_data_for_email_' . $type_number, $unserialized_data,
+							$data_to_process );
+						$message        = apply_filters( 'gdpr_get_del_message_' . $type_number, $unserialized_data,
+							$data_to_process );
 						do_action( 'gdpr_execute_del_req_' . $type_number, $unserialized_data, $data_to_process );
 					}
 					$this->set_notice( $message );
@@ -155,7 +159,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 						//change status into anonymous
 						$type_number = $data_to_process['r_type'];
 						do_action( 'gdpr_execute_anonymous_req_' . $type_number, $unserialized_data, $data_to_process );
-						$message = apply_filters( 'gdpr_get_anonymous_message_' . $type_number, $unserialized_data, $data_to_process );
+						$message = apply_filters( 'gdpr_get_anonymous_message_' . $type_number, $unserialized_data,
+							$data_to_process );
 					}
 
 					//happends always for anonymous request no matter where
@@ -286,7 +291,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 
 	public function map_comments_for_email( $data ) {
 
-		return __( 'Comment author', 'wp_gdpr' ) . ': ' . $data->comment_author . ' ' . __( 'content', 'wp_gdpr' ) . ': ' . $data->comment_content;
+		return __( 'Comment author', 'wp_gdpr' ) . ': ' . $data->comment_author . ' ' . __( 'content',
+				'wp_gdpr' ) . ': ' . $data->comment_content;
 	}
 
 	public function request_add_on() {
@@ -327,7 +333,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 			update_option( self::PRIVACY_POLICY_LABEL . $lang, $privacy_policy_label );
 		}
 		if ( ! isset( $privacy_policy_text ) ) {
-			$privacy_policy_text = __( 'This form collects your name, email and content so that we can keep track of the comments placed on the website. For more info check our privacy policy where you\'ll get more info on where, how and why we store your data.', 'wp_gdpr' );
+			$privacy_policy_text = __( 'This form collects your name, email and content so that we can keep track of the comments placed on the website. For more info check our privacy policy where you\'ll get more info on where, how and why we store your data.',
+				'wp_gdpr' );
 			update_option( self::PRIVACY_POLICY_TEXT . $lang, $privacy_policy_text );
 		}
 		if ( ! isset( $privacy_policy_checkbox ) ) {
@@ -337,7 +344,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 
 		if ( ! isset( $privacy_policy_text_data_request ) ) {
 			$string                           = __( 'I consent to having %s collect my email so that they can send me my requested info.
-            For more info check our privacy policy where you\'ll get more info on where, how and why we store your data.', 'wp_gdpr' );
+            For more info check our privacy policy where you\'ll get more info on where, how and why we store your data.',
+				'wp_gdpr' );
 			$blog_name                        = get_bloginfo( 'name' );
 			$privacy_policy_text_data_request = sprintf( $string, $blog_name );
 			update_option( self::PRIVACY_POLICY_TEXT_DATA_REQUEST . $lang, $privacy_policy_text_data_request );
@@ -515,7 +523,8 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 			case 6:
 				$data['r_type'] = __( 'condolance manager', 'wp_gdpr' );
 				break;
-
+			default:
+				$data['r_type'] = apply_filters( 'wp_gdpr_type_' . $data['r_type'], '' );
 		}
 
 		return $data;
