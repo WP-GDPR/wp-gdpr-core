@@ -29,6 +29,10 @@ class Text_Config {
 		echo apply_filters( 'wp_gdpr_wp_grafity_form', __( 'Gravity Forms', 'wp_gdpr' ) );
 	}
 
+	public function filter_wp_eventmanager() {
+		echo apply_filters( 'wp_gdpr_wp_eventmanager_form', __( 'Events Manager', 'wp_gdpr' ) );
+	}
+
 	public static function filter_wp_woocommerce() {
 		echo apply_filters( 'wp_gdpr_wp_woocommerce', __( 'WooCommerce', 'wp_gdpr' ) );
 	}
