@@ -1,5 +1,8 @@
 # CHANGELOG
 
+#Version 2.0.9
+* Add events manager 
+
 #Version 2.0.8
 * Add condolance manager in plugins.json
 
