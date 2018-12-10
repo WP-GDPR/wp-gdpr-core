@@ -1,5 +1,9 @@
 # CHANGELOG
 
+#Version 2.1.0
+* Making compatible with wordpress 5.0
+* Added Events Manager shortcode
+
 #Version 2.0.8
 * Add condolance manager in plugins.json
 

@@ -75,5 +75,17 @@
     "plugin_tutorial_img": "https://wp-gdpr.eu/wp-content/uploads/2018/04/cf7-1.png",
     "plugin_tutorial_intro": "Make your <a href='https://condolencemanager.com/' target='_blank'>Condolance Manager</a> GDPR ready.",
     "plugin_icon": "assets/images/cdm.png"
+  },
+  "eventsmanager":{
+    "name" : "Events Manager",
+    "slug" : "evm",
+    "data_stored_in": "entries, csv",
+    "plugin_name": "events-manager/events-manager.php",
+    "plugin_link": "https://wp-gdpr.eu/add-ons/events-manager-add-on/",
+    "plugin_wp_gdpr": "wp-gdpr-evm-addon/wp-gdpr-evm-addon.php",
+    "plugin_tutorial_link": "https://wp-gdpr.eu/portfolio/",
+    "plugin_tutorial_img": "https://wp-gdpr.eu/wp-content/uploads/2018/04/cf7-1.png",
+    "plugin_tutorial_intro": "Make your Events Manager GDPR ready.",
+    "plugin_icon": "assets/images/evm_logo.png"
   }
 }

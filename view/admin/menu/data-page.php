@@ -15,7 +15,7 @@ use wp_gdpr\lib\Gdpr_Helper;
         <a target="_blank" id="a_addon" href="<?php echo admin_url( 'admin.php?page=addon' ) ?>"><span  class="dashicons dashicons-screenoptions"></span>&nbsp;Add-ons</a>
     </div>
     <div id="nav_menu_extra">
-        <a id="a_review" target="_blank" href="https://wordpress.org/support/plugin/wp-gdpr-core/reviews/#new-post"><span class="dashicons dashicons-admin-comments"></span>&nbsp;Review
+        <a id="a_review" target="_blank" href="https://wordpress.org/support/plugin/wp-gdpr-core/reviews/?filter=5"><span class="dashicons dashicons-admin-comments"></span>&nbsp;Review
             our plugin</a>
         <a id="a_homepage" target="_blank" href="https://wp-gdpr.eu/"><span class="dashicons dashicons-admin-home"></span>&nbsp;Visit our homepage</a>
     </div>
