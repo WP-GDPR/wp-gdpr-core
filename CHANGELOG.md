@@ -1,4 +1,7 @@
 # CHANGELOG
+#Version 2.1.1
+* Making compatible with wordpress 5.0.2
+* Bootstrap fix
 
 #Version 2.1.0
 * Making compatible with wordpress 5.0
