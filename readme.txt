@@ -84,6 +84,7 @@ We have added filters to change the text on the navigation of the privacy center
 5. 'Mailchimp' => 'wp_gdpr_wp_mailchimp'
 6. 'Gravity Forms' => 'wp_gdpr_wp_grafity_form'
 7. 'WooCommerce' => 'wp_gdpr_wp_woocommerce'
+8. 'Events Manager' => 'wp_gdpr_wp_eventmanager_form'
 
 
 == Installation ==
