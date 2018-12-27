@@ -30,8 +30,8 @@ class Controller_Frontend extends Gdpr_Log_Interface {
 			if ( ! isset( $_REQUEST['req'] ) ) {
 				return;
 			}
-			wp_enqueue_script( 'popper_min_js', GDPR_URL . 'assets/js/popper.min.js', array( 'jquery' ), null, true );
-			wp_enqueue_script( 'bootstrap_min_js', GDPR_URL . 'assets/js/bootstrap.min.js', array( 'jquery' ), null, false );
+			wp_enqueue_script( 'popper_min_js', GDPR_URL . 'assets/js/popper.min.js', 10, array( 'jquery' ), null, true );
+			wp_enqueue_script( 'bootstrap_min_js', GDPR_URL . 'assets/js/bootstrap.min.js', 12,  array( 'jquery' ), null, false );
 			wp_enqueue_script( 'jquery_slimscroll_js', GDPR_URL . 'assets/js/jquery.slimscroll.js', array( 'jquery' ), null, true );
 			wp_enqueue_script( 'modernizr_min_js', GDPR_URL . 'assets/js/modernizr.min.js', array( 'jquery' ), null, false );
 			wp_enqueue_script( 'jquery_scrollTo_min_js', GDPR_URL . 'assets/js/jquery.scrollTo.min.js', array( 'jquery' ), null, true );
