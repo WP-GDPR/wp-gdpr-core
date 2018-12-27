@@ -21,6 +21,8 @@ Integration with:
  - [Contact Form DB 7](https://wp-gdpr.eu/add-ons/contact-form-db-7-addon/)
  - [WooCommerce](https://wp-gdpr.eu/add-ons/woocommerce-add-on/)
  - [Flamingo](https://wp-gdpr.eu/add-on/flamingo-add-on)
+ - [Condolence Manager](https://wp-gdpr.eu/add-ons/condolence-manager-add-on/)
+ - [Events Manager](https://wp-gdpr.eu/add-on/events-manager-add-on/)
 
 = How WP-GDPR Core works =
 
