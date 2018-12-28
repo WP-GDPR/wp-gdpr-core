@@ -3,7 +3,7 @@ Contributors: mieke01,sebakurzyn,vanrijckel,kevinume,aytac,koenhuybrechts,markcr
 Tags: Personal data, GDPR, compliance, regulations, protection, data protection, consent, European, regulation, privacy, RGPD, AVG, EU, Woocommerce, wc, Contact Form 7, cf7, cfdb7, gravity forms, gf, flamingo
 Requires at least: 4.6.10
 Tested up to: 5.0.2
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 Requires PHP: 5.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -107,8 +107,11 @@ We have added filters to change the text on the navigation of the privacy center
 == Frequently Asked Questions ==
 
 == Changelog ==
+Version 2.1.1 (2018-12-27)
+    - Making compatible with wordpress 5.0.2
+    - Bootstrap fix
 
-Version 2.1.0 (208-12-10)
+Version 2.1.0 (2018-12-10)
     - Making compatible with wordpress 5.0
     - Added Events Manager shortcode
 
