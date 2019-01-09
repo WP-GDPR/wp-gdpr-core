@@ -60,6 +60,7 @@
 }
 #wpgdpr .table td, .table th {
     padding: .75rem;
+    word-break: inherit;
 }
 #wpgdpr .table td, #wp-gdpr .table td{
     padding-left: 30px;
