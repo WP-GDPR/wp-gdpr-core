@@ -282,7 +282,7 @@ use wp_gdpr\lib\Gdpr_Helper;
                                     It's not possible to delete fields needed for billing as these are required by law.
                                 </li>
                                 <li>
-                                    NO automatic consent checkbox yet, this is planned in our next woocommerce update.
+                                    NO automatic consent checkbox yet, this is planned in our next WooCommerce update.
                                 </li>
                             </ul>
                             <p>

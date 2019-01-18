@@ -17,14 +17,14 @@
     "plugin_icon": "assets/images/gravity-forms-logo.png"
   },
   "woocommerce":{
-    "name" : "Woocommerce",
+    "name" : "WooCommerce",
     "slug" : "woocommerce",
     "data_stored_in": "orders",
     "plugin_name": "woocommerce/woocommerce.php",
     "plugin_link": "https://wp-gdpr.eu/add-ons/woocommerce-add-on/",
     "plugin_wp_gdpr": "wp-gdpr-wc-addon/wp-gdpr-wc-addon.php",
     "plugin_tutorial_link": "https://wp-gdpr.eu/add-ons/woocommerce-add-on/",
-    "plugin_tutorial_intro": "Woocommerce is a shopping platform on Wordpress.",
+    "plugin_tutorial_intro": "WooCommerce is a shopping platform on WordPress.",
     "plugin_tutorial_img": "https://wp-gdpr.eu/wp-content/uploads/2018/04/woocommerce-info.png",
     "plugin_icon": "assets/images/woo-logo.png"
   },
