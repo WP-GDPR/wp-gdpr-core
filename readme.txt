@@ -1,6 +1,6 @@
 === WP GDPR ===
 Contributors: mieke01,sebakurzyn,vanrijckel,kevinume,aytac,koenhuybrechts,markcreeten
-Tags: Personal data, GDPR, compliance, regulations, protection, data protection, consent, European, regulation, privacy, RGPD, AVG, EU, Woocommerce, wc, Contact Form 7, cf7, cfdb7, gravity forms, gf, flamingo
+Tags: Personal data, GDPR, compliance, regulations, protection, data protection, consent, European, regulation, privacy, RGPD, AVG, EU, WooCommerce, wc, Contact Form 7, cf7, cfdb7, gravity forms, gf, flamingo
 Requires at least: 4.6.10
 Tested up to: 5.0.2
 Stable tag: 2.1.1
@@ -79,7 +79,7 @@ We have added 3 filters to change the text on the request page.
 We have added filters to change the text on the navigation of the privacy center page.
 
 0. 'Original text' => 'filter_name'
-1. 'Wordpress Comments' => 'wp_gdpr_wp_comments'
+1. 'WordPress Comments' => 'wp_gdpr_wp_comments'
 2. 'Condolence Manager' => 'wp_gdpr_wp_condolance_manager'
 3. 'Contact Form DB7' => 'wp_gdpr_wp_cfdb7'
 4. 'Flamingo' => 'wp_gdpr_wp_flamingo'
@@ -108,11 +108,11 @@ We have added filters to change the text on the navigation of the privacy center
 
 == Changelog ==
 Version 2.1.1 (2018-12-27)
-    - Making compatible with wordpress 5.0.2
+    - Making compatible with WordPress 5.0.2
     - Bootstrap fix
 
 Version 2.1.0 (2018-12-10)
-    - Making compatible with wordpress 5.0
+    - Making compatible with WordPress 5.0
     - Added Events Manager shortcode
 
 Version 2.0.8 (2018-08-01)
