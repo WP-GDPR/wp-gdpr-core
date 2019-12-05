@@ -90,7 +90,7 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 		if( ! isset( $_REQUEST['security_nonce'] ) || ! wp_verify_nonce( Request_Form::PRIVACY_SECURITY_NONCE_BASE ) ) {
 			echo 'oh no you did not just try that'; die;
 		} else {
-			if( ! user_can( 'manage_options' ) ) {
+			if( ! current_user_can( 'manage_options' ) ) {
 				echo 'you are not allowed to do this but thanks for trying'; die;
 			} elseif ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_save_priv_pol_settings'] ) ) {
 				$this->log->info( 'Privacy policy update when url is submited' );
