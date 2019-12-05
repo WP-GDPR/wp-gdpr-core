@@ -5,6 +5,7 @@
 
 use wp_gdpr\model\Request_Form;
 
+
 ?>
 <form method="post" action="" class="postbox postbox" id="gdpr_admin_privacy_policy">
     <div class="tooltip">
@@ -65,7 +66,7 @@ use wp_gdpr\model\Request_Form;
     </div>
 
 	<?php do_action( 'gdpr_display_custom_privacy_policy' ); ?>
-
+	<input type="hidden" name="security_nonce" value="<?php echo wp_create_nonce( Request_Form::PRIVACY_SECURITY_NONCE_BASE );?>" >
     <input type="submit" class="button button-primary" name="gdpr_save_priv_pol_settings"
            value="<?php _e( 'Update privacy policy settings', 'wp_gdpr' ); ?>">
 </form>

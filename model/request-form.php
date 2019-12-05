@@ -11,6 +11,8 @@ use wp_gdpr\lib\Session_Handler;
 
 class Request_Form extends Form_Validation_Model {
 
+	const PRIVACY_SECURITY_NONCE_BASE = 'privacy_policy_form_submit';
+
 	/**
 	 * Request_Form constructor.
 	 */
