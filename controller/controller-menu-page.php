@@ -87,22 +87,27 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 	public function update_privacy_policy_settings() {
 		$lang = new Gdpr_Language();
 		$lang = $lang->get_language();
-		if( ! isset( $_REQUEST['security_nonce'] ) || ! wp_verify_nonce( Request_Form::PRIVACY_SECURITY_NONCE_BASE ) ) {
-			echo 'oh no you did not just try that'; die;
-		} else {
-			if( ! current_user_can( 'manage_options' ) ) {
-				echo 'you are not allowed to do this but thanks for trying'; die;
-			} elseif ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_save_priv_pol_settings'] ) ) {
-				$this->log->info( 'Privacy policy update when url is submited' );
-				update_option( self::PRIVACY_POLICY_LABEL . $lang, $_REQUEST['gdpr_priv_pov_label'] );
-				update_option( self::PRIVACY_POLICY_TEXT . $lang, $_REQUEST['gdpr_priv_pov_text'] );
-				update_option( self::PRIVACY_POLICY_CHECKBOX . $lang, $_REQUEST['gdpr_priv_pov_checkbox'] );
-				update_option( self::PRIVACY_POLICY_TEXT_DATA_REQUEST . $lang,
-					$_REQUEST['gdpr_priv_pov_text_data_request'] );
 
-				do_action( 'gdpr_save_custom_privacy_policy', $lang );
+			if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_save_priv_pol_settings'] ) ) {
+				if (!isset($_REQUEST['security_nonce']) || !wp_verify_nonce(Request_Form::PRIVACY_SECURITY_NONCE_BASE)) {
+					echo 'oh no you did not just try that';
+					die;
+				} else {
+					if (!current_user_can('manage_options')) {
+						echo 'you are not allowed to do this but thanks for trying';
+						die;
+					} else {
+						$this->log->info( 'Privacy policy update when url is submited' );
+						update_option( self::PRIVACY_POLICY_LABEL . $lang, $_REQUEST['gdpr_priv_pov_label'] );
+						update_option( self::PRIVACY_POLICY_TEXT . $lang, $_REQUEST['gdpr_priv_pov_text'] );
+						update_option( self::PRIVACY_POLICY_CHECKBOX . $lang, $_REQUEST['gdpr_priv_pov_checkbox'] );
+						update_option( self::PRIVACY_POLICY_TEXT_DATA_REQUEST . $lang,
+							$_REQUEST['gdpr_priv_pov_text_data_request'] );
+
+						do_action( 'gdpr_save_custom_privacy_policy', $lang );
+					}
+				}
 			}
-		}
 	}
 
 
