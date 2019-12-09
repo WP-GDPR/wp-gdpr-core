@@ -115,74 +115,77 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 	 * delete all comments selected in admin menu in form
 	 */
 	public function post_delete_comments() {
-		if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_requests'] ) && is_array( $_REQUEST['gdpr_requests'] ) ) {
-			$this->log->info( 'Deleted all comments selected in admin menu' );
-			foreach ( $_REQUEST['gdpr_requests'] as $single_request_id ) {
-				//get all selected comments
-				//unserialize
-				$single_request_id = sanitize_text_field( $single_request_id );
-				$data_to_process   = $this->find_delete_request_by_id( $single_request_id );
-				$unserialized_data = $this->unserialize( $data_to_process['data'] );
-				//check post request
-				if ( isset( $_REQUEST['gdpr_delete_comments'] ) ) {
-					//check type of request
-					$this->log->info( 'Check type of request' );
-					if ( 0 == $this->get_type_of_request( $data_to_process ) ) {
-						//get all comments before process to show info in email
-						$original_comments = $this->get_original_comments( $unserialized_data );
-						//delete
-						//change status in delete
-						$this->log->info( 'Change status in delete and delete' );
-						$this->delete_comments( $unserialized_data );
-						$this->update_status( $single_request_id, 1 );
-						//change comment object into one row string for email table
-						$processed_data = array_map( array( $this, 'map_comments_for_email' ), $original_comments );
-						$message        = __( 'Comments deleted', 'wp_gdpr' );
-					} else {
-						$type_number    = $data_to_process['r_type'];
-						$processed_data = apply_filters( 'gdpr_map_data_for_email_' . $type_number, $unserialized_data,
-							$data_to_process );
-						$message        = apply_filters( 'gdpr_get_del_message_' . $type_number, $unserialized_data,
-							$data_to_process );
-						do_action( 'gdpr_execute_del_req_' . $type_number, $unserialized_data, $data_to_process );
-					}
-					$this->set_notice( $message );
-				}
-
-				//check post request
-				if ( isset( $_REQUEST['gdpr_anonymous_comments'] ) ) {
-					//if comments
-					$this->log->info( 'Change status into anonymous and make anonymous' );
-					if ( 0 == $this->get_type_of_request( $data_to_process ) ) {
+		if( current_user_can( 'manage_options' ) ) {
+			if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_requests'] ) && is_array( $_REQUEST['gdpr_requests'] ) ) {
+				$this->log->info( 'Deleted all comments selected in admin menu' );
+				foreach ( $_REQUEST['gdpr_requests'] as $single_request_id ) {
+					//get all selected comments
+					//unserialize
+					$single_request_id = sanitize_text_field( $single_request_id );
+					$data_to_process   = $this->find_delete_request_by_id( $single_request_id );
+					$unserialized_data = $this->unserialize( $data_to_process['data'] );
+					//check post request
+					if ( isset( $_REQUEST['gdpr_delete_comments'] ) ) {
 						//check type of request
-						//make anonymous
-						//change status into anonymous
-						$this->make_anonymous( $unserialized_data );
-						$this->update_status( $single_request_id, 2 );
-						$message = __( 'Comments are anonymous', 'wp_gdpr' );
-					} else {
-						/**
-						 * if addons
-						 */
-						//check type of request
-						//make anonymous
-						//change status into anonymous
-						$type_number = $data_to_process['r_type'];
-						do_action( 'gdpr_execute_anonymous_req_' . $type_number, $unserialized_data, $data_to_process );
-						$message = apply_filters( 'gdpr_get_anonymous_message_' . $type_number, $unserialized_data,
-							$data_to_process );
+						$this->log->info( 'Check type of request' );
+						if ( 0 == $this->get_type_of_request( $data_to_process ) ) {
+							//get all comments before process to show info in email
+							$original_comments = $this->get_original_comments( $unserialized_data );
+							//delete
+							//change status in delete
+							$this->log->info( 'Change status in delete and delete' );
+							$this->delete_comments( $unserialized_data );
+							$this->update_status( $single_request_id, 1 );
+							//change comment object into one row string for email table
+							$processed_data = array_map( array( $this, 'map_comments_for_email' ), $original_comments );
+							$message        = __( 'Comments deleted', 'wp_gdpr' );
+						} else {
+							$type_number    = $data_to_process['r_type'];
+							$processed_data = apply_filters( 'gdpr_map_data_for_email_' . $type_number, $unserialized_data,
+								$data_to_process );
+							$message        = apply_filters( 'gdpr_get_del_message_' . $type_number, $unserialized_data,
+								$data_to_process );
+							do_action( 'gdpr_execute_del_req_' . $type_number, $unserialized_data, $data_to_process );
+						}
+						$this->set_notice( $message );
 					}
 
-					//happends always for anonymous request no matter where
-					$this->set_notice( $message );
-					//TODO create data about making anonymous entries or comments to send in email as content
-					$processed_data = array();
-				}
+					//check post request
+					if ( isset( $_REQUEST['gdpr_anonymous_comments'] ) ) {
+						//if comments
+						$this->log->info( 'Change status into anonymous and make anonymous' );
+						if ( 0 == $this->get_type_of_request( $data_to_process ) ) {
+							//check type of request
+							//make anonymous
+							//change status into anonymous
+							$this->make_anonymous( $unserialized_data );
+							$this->update_status( $single_request_id, 2 );
+							$message = __( 'Comments are anonymous', 'wp_gdpr' );
+						} else {
+							/**
+							 * if addons
+							 */
+							//check type of request
+							//make anonymous
+							//change status into anonymous
+							$type_number = $data_to_process['r_type'];
+							do_action( 'gdpr_execute_anonymous_req_' . $type_number, $unserialized_data, $data_to_process );
+							$message = apply_filters( 'gdpr_get_anonymous_message_' . $type_number, $unserialized_data,
+								$data_to_process );
+						}
 
-				Gdpr_Email::send_confirmation_email_to_requester( $data_to_process, $processed_data );
-				Gdpr_Email::send_confirmation_email_to_dpo( $data_to_process, $processed_data );
+						//happends always for anonymous request no matter where
+						$this->set_notice( $message );
+						//TODO create data about making anonymous entries or comments to send in email as content
+						$processed_data = array();
+					}
+
+					Gdpr_Email::send_confirmation_email_to_requester( $data_to_process, $processed_data );
+					Gdpr_Email::send_confirmation_email_to_dpo( $data_to_process, $processed_data );
+				}
 			}
 		}
+
 	}
 
 	/**
@@ -882,24 +885,29 @@ class Controller_Menu_Page extends Gdpr_Log_Interface {
 	 * @since 1.5.0
 	 */
 	public function save_settings() {
-		if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_save_global_settings'] ) ) {
-			$this->log->info( 'Saved DPO settings' );
-			$settings = $this->get_settings();
-			foreach ( $settings as $option_name => $setting ) {
-				switch ( $setting['type'] ) {
-					case 'checkbox':
-						$value = isset( $_REQUEST[ $option_name ] ) && sanitize_text_field( $_REQUEST[ $option_name ] ) === 'on' ? 1 : 0;
-						break;
-					case 'text':
-						$value = isset( $_REQUEST[ $option_name ] ) && sanitize_text_field( $_REQUEST[ $option_name ] ) ? $_REQUEST[ $option_name ] : '';
-						break;
-					case 'email':
-						$value = isset( $_REQUEST[ $option_name ] ) && sanitize_email( $_REQUEST[ $option_name ] ) ? $_REQUEST[ $option_name ] : '';
-						break;
+		if( current_user_can( 'manage_options' ) ) {
+			if ( 'POST' == $_SERVER['REQUEST_METHOD'] && isset( $_REQUEST['gdpr_save_global_settings'] ) ) {
+				$this->log->info( 'Saved DPO settings' );
+				$settings = $this->get_settings();
+				foreach ( $settings as $option_name => $setting ) {
+					switch ( $setting['type'] ) {
+						case 'checkbox':
+							$value = isset( $_REQUEST[ $option_name ] ) && sanitize_text_field( $_REQUEST[ $option_name ] ) === 'on' ? 1 : 0;
+							break;
+						case 'text':
+							$value = isset( $_REQUEST[ $option_name ] ) && sanitize_text_field( $_REQUEST[ $option_name ] ) ? $_REQUEST[ $option_name ] : '';
+							break;
+						case 'email':
+							$value = isset( $_REQUEST[ $option_name ] ) && sanitize_email( $_REQUEST[ $option_name ] ) ? $_REQUEST[ $option_name ] : '';
+							break;
+					}
+					update_option( $option_name, $value );
 				}
-				update_option( $option_name, $value );
+				$this->set_notice( __( 'Settings saved', 'wp_gdpr' ) );
 			}
-			$this->set_notice( __( 'Settings saved', 'wp_gdpr' ) );
+		} else {
+			$this->set_notice( __( 'You dont have permission to change these settings' ) );
 		}
+
 	}
 }
