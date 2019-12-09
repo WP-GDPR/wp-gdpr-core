@@ -258,41 +258,51 @@ class Controller_Comments extends Gdpr_Log_Interface {
 	 * ajax endpoint
 	 */
 	public function wp_gdpr() {
+
 		switch ( $_REQUEST['action_switch'] ) {
 			case 'edit_comment':
-				$field      = sanitize_text_field( $_REQUEST['input_name'] );
-				$new_value  = $_REQUEST['new_value'];
-				$comment_id = sanitize_text_field( $_REQUEST['comment_id'] );
+				$comment = get_comment( $_REQUEST['comment_id'] );
+				$comment_author_id = (int) $comment->user_id;
 
-				//when id is not a number
-				if ( ! is_numeric( $comment_id ) ) {
-					$this->log->info( 'Id is not a number' );
-					wp_send_json( __( 'Something went wrong.', 'wp_gdpr' ) );
-				}
+				if( $comment_author_id == get_current_user_id() ) {
 
-				//when email update
-				if ( 'comment_author_email' === $field ) {
-					$this->log->info( 'Email is updated' );
-					$new_value = sanitize_email( $new_value );
-					if ( empty ( $new_value ) ) {
-						wp_send_json( '<h3>' . __( 'Email is not valid', 'wp_gdpr' ) . '</h3>' );
+					$field      = sanitize_text_field( $_REQUEST['input_name'] );
+					$new_value  = $_REQUEST['new_value'];
+					$comment_id = sanitize_text_field( $_REQUEST['comment_id'] );
+
+					//when id is not a number
+					if ( ! is_numeric( $comment_id ) ) {
+						$this->log->info( 'Id is not a number' );
+						wp_send_json( __( 'Something went wrong.', 'wp_gdpr' ) );
 					}
-					//when other inputs edit
+
+					//when email update
+					if ( 'comment_author_email' === $field ) {
+						$this->log->info( 'Email is updated' );
+						$new_value = sanitize_email( $new_value );
+						if ( empty ( $new_value ) ) {
+							wp_send_json( '<h3>' . __( 'Email is not valid', 'wp_gdpr' ) . '</h3>' );
+						}
+						//when other inputs edit
+					} else {
+						$new_value = sanitize_text_field( $new_value );
+					}
+
+
+					//create args of comment to update
+					$comment = $this->build_comment( $comment_id, $field, $new_value );
+
+					wp_update_comment(
+						$comment
+					);
+
+					//send feedback
+					$this->log->info( 'Comment is changed' );
+					wp_send_json( '<h3>' . __( 'Comment is changed', 'wp_gdpr' ) . '</h3>' );
 				} else {
-					$new_value = sanitize_text_field( $new_value );
+					wp_send_json_error( '<h3>' . __( 'Comment is changed', 'wp_gdpr' ) . '</h3>' );
 				}
 
-
-				//create args of comment to update
-				$comment = $this->build_comment( $comment_id, $field, $new_value );
-
-				wp_update_comment(
-					$comment
-				);
-
-				//send feedback
-				$this->log->info( 'Comment is changed' );
-				wp_send_json( '<h3>' . __( 'Comment is changed', 'wp_gdpr' ) . '</h3>' );
 				break;
 
 			//universal enpoint for addons
