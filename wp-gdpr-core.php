@@ -13,7 +13,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP GDPR
  * Description:       Make your website GDPR compliant and automate the process of handling personal data while integrating with plugins.
- * Version:           2.1.1
+ * Version:           2.2.0
  * Text Domain:       wp_gdpr
  * Domain Path:       /languages
  * Author:            AppSaloon

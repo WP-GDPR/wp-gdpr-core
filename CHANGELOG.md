@@ -1,4 +1,7 @@
 # CHANGELOG
+#Version 2.2.0
+* Fixes security issues
+
 #Version 2.1.1
 * Making compatible with WordPress 5.0.2
 * Bootstrap fix
